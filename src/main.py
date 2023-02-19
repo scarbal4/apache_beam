@@ -70,6 +70,11 @@ def run_pipeline(custom_args, beam_args):
         print("ahora el formateado")
         formateado | beam.Map(print)
         #print (palabras_top)
+        formateado | beam.io.WriteToText(salida)
+
+
+        # Se escribe la salida a un fichero
+
 
 
 
